@@ -1,5 +1,5 @@
 body {
-    background: linear-gradient(to bottom, #a770ef, #cf8bf3, #fdb99b);
+    background: linear-gradient(#a770ef, #cf8bf3, #fdb99b);
     font-family: 'Poppins', sans-serif;
     line-height: 1.5;
     font-size: 0.8rem;
@@ -8,3 +8,55 @@ body {
 ul {
     list-style-type: none;
 }
+
+a {
+    text-decoration: none;
+}
+
+h1,h2,h3,h4 {
+    text-transform: capitalize;
+    margin-bottom: 0.75rem;
+    line-height: 1.25;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+.section {
+    padding: 5rem 0;
+}
+
+.section-center {
+    width: 90vw;
+    margin: 0 auto;
+    max-width: 1170px;
+}
+
+main {
+    min-height: 100vh;
+    display: 1170px;
+    align-items: center;
+}
+
+.container {
+    text-align: center;
+}
+
+#value {
+    font-size: 6rem;
+    font-weight: bold;
+}
+
+.btn {
+    text-transform: uppercase;
+    background: transparent;
+    padding: 0.375rem 0.75rem;
+    display: inline-block;
+    font-size: 0.875rem;
+    border: 2px solid #000;
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgb(0,0,0,0.2);
+    margin: 0.5rem;
+}
+
