@@ -1,4 +1,10 @@
 body {
     background: linear-gradient(to bottom, #a770ef, #cf8bf3, #fdb99b);
     font-family: 'Poppins', sans-serif;
+    line-height: 1.5;
+    font-size: 0.8rem;
+}
+
+ul {
+    list-style-type: none;
 }
