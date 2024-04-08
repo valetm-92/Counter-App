@@ -1,8 +1,10 @@
 body {
     background: linear-gradient(#a770ef, #cf8bf3, #fdb99b);
     font-family: 'Poppins', sans-serif;
-    line-height: 1.5;
-    font-size: 0.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
 ul {
@@ -34,13 +36,17 @@ h1 {
 }
 
 main {
-    min-height: 100vh;
-    display: 1170px;
-    align-items: center;
+    margin: 0;
+    padding: 0;
 }
 
 .container {
     text-align: center;
+    background: linear-gradient(to right bottom,rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
+    border-radius: 20px;
+    width: 100vh;
+    min-height: 50vh;
+    padding: 60px;
 }
 
 #value {
@@ -52,11 +58,28 @@ main {
     text-transform: uppercase;
     background: transparent;
     padding: 0.375rem 0.75rem;
-    display: inline-block;
     font-size: 0.875rem;
     border: 2px solid #000;
     cursor: pointer;
     box-shadow: 0 1px 3px rgb(0,0,0,0.2);
     margin: 0.5rem;
+}
+
+.circle1, .circle2 {
+    background: linear-gradient(to right bottom,rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
+    height: 220px;
+    width: 220px;
+    position: absolute;
+    border-radius: 220px;
+}
+
+.circle1 {
+    top: 5%;
+    right: 15%;
+}
+
+.circle2 {
+    bottom: 5%;
+    left: 15%;
 }
 
