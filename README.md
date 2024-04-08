@@ -40,7 +40,7 @@ Con la presente si concede il permesso, a titolo gratuito, a chiunque ottenga un
 
 ## Autore 
 
-Website: https://github.com/valetm-92/github
+Website: https://github.com/valetm-92/Counter-app
 
 ---
 
