@@ -1,6 +1,3 @@
-
-
-
 const div = document.querySelector('div');
 const h1 = document.createElement('h1');
 h1.textContent = '0';
@@ -36,29 +33,22 @@ buttonIncrease.style.padding = '0.375rem 0.75rem';
 buttonIncrease.style.boxShadow = '0 1px 3px rgb(0,0,0,0.2)';
 buttonIncrease.style.margin = '0.5rem';
 
-const value = document.querySelector("h1");
-const btns = document.querySelectorAll("button");
+let value = 0;
 
-const btn = document.querySelector('button');
+buttonIncrease.addEventListener('click', function(add){
+    value++;
+    h1.innerHTML = value;
+    h1.style.color = 'green';
+});
 
-btns.forEach(function() {
-    btn.addEventListener("click", function(e){
-        const styles = e.currentTarget.classList;
-        if(styles.contains("decrease")){
-            count--;
-        }else if(styles.contains("increase")) {
-            count++;
-        }else{
-            count = 0;
-        }
+buttonDecrease.addEventListener('click', function(add){
+    value--;
+    h1.innerHTML = value;
+    h1.style.color = 'red';
+});
 
-        if(count > 0) {
-            value.style.color = "green";
-        }else if(count < 0) {
-            value.style.color = "red";
-        }else if(count == 0){
-            value.style.color = "#000";
-        }
-        value.textContent = count;
-    });
+buttonReset.addEventListener('click', function(add){
+    value = 0;
+    h1.innerHTML = value;
+    h1.style.color = 'black';
 });
