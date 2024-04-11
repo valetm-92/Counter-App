@@ -19,7 +19,7 @@ HTML, CSS, JavaScipt.
 ---
 
 
-<img src="assets/preview.png" alt="picture">
+<img src="images/preview.png" alt="picture">
  
 La funzionalità generale del progetto è che è abbastanza intuitivo e non ha bisogno di essere aperto in una nuova finestra.
 Questa pagina è stata progettata per avere poche informazioni ma solo l'applicazione, per evitare il disordine come principio di progettazione.

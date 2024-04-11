@@ -66,3 +66,44 @@ buttons.forEach(button => {
         updateColor();
     });
 });
+
+// Aggiunta dei media query per gli stili responsive
+var mq = window.matchMedia('(max-width: 414px)');
+if (mq.matches) {
+    // Stili per dispositivi con larghezza massima di 414px
+    buttonDecrease.style.fontSize = '14px';
+    buttonReset.style.fontSize = '14px';
+    buttonIncrease.style.fontSize = '14px';
+    buttonIncrease.style.width = '100%';
+    buttonDecrease.style.width = '100%';
+    buttonReset.style.width = '100%';
+} else {
+    // Stili per dispositivi con larghezza superiore a 414px
+    buttonDecrease.style.fontSize = '16px';
+    buttonReset.style.fontSize = '16px';
+    buttonIncrease.style.fontSize = '16px';
+    buttonDecrease.style.padding = '0.375rem 0.75rem';
+    buttonIncrease.style.padding = '0.375rem 0.75rem';
+    buttonReset.style.padding = '0.375rem 0.75rem';
+}
+
+// Aggiungi un listener per rilevare cambiamenti nella larghezza dello schermo
+window.addEventListener('resize', function() {
+    if (mq.matches) {
+        // Stili per dispositivi con larghezza massima di 414px
+        buttonDecrease.style.fontSize = '14px';
+        buttonReset.style.fontSize = '14px';
+        buttonIncrease.style.fontSize = '14px';
+        buttonIncrease.style.width = '100%';
+        buttonDecrease.style.width = '100%';
+        buttonReset.style.width = '100%';
+    } else {
+        // Stili per dispositivi con larghezza superiore a 414px
+        buttonDecrease.style.fontSize = '16px';
+        buttonReset.style.fontSize = '16px';
+        buttonIncrease.style.fontSize = '16px';
+        buttonDecrease.style.padding = '0.375rem 0.75rem';
+        buttonIncrease.style.padding = '0.375rem 0.75rem';
+        buttonReset.style.padding = '0.375rem 0.75rem';
+    }
+});
