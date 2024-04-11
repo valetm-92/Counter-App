@@ -1,54 +1,68 @@
-const div = document.querySelector('div');
-const h1 = document.createElement('h1');
-h1.textContent = '0';
-div.appendChild(h1);
+// Definizione di una funzione per creare e aggiungere un elemento HTML
+function createAndAppendElement(tagName, className, innerHTML, parentElement) {
+    const element = document.createElement(tagName); // Crea un nuovo elemento con il tagName specificato
+    element.className = className; // Aggiunge la classe specificata all'elemento
+    element.innerHTML = innerHTML;
+    parentElement.appendChild(element); // Aggiunge l'elemento come figlio del parentElement specificato
+    return element;
+};
 
-const buttonDecrease = document.createElement('button');
-buttonDecrease.textContent = '-';
-div.appendChild(buttonDecrease);
 
+const div = document.querySelector('div'); // Seleziona un elemento div esistente nella pagina
+const h1 = createAndAppendElement('h1', '', '0', div); // Crea un elemento h1, lo aggiunge al div e lo memorizza nella variabile h1
+
+// Crea e aggiunge tre bottoni al div
+const buttonDecrease = createAndAppendElement('button', '', '-', div);
 buttonDecrease.style.color = 'black';
-buttonDecrease.style.backgroundColor = 'trasparent';
+buttonDecrease.style.backgroundColor = 'transparent';
 buttonDecrease.style.padding = '0.375rem 0.75rem';
-buttonDecrease.style.boxShadow = '0 1px 3px rgb(0,0,0,0.2)';
+buttonDecrease.style.boxShadow = '0 1px 3px rgba(0, 0, 0, 0.2)';
 buttonDecrease.style.margin = '0.5rem';
 
-const buttonReset = document.createElement('button');
-buttonReset.textContent = 'Resetta';
-div.appendChild(buttonReset);
-
+const buttonReset = createAndAppendElement('button', '', 'Resetta', div);
 buttonReset.style.color = 'black';
-buttonReset.style.backgroundColor = 'trasparent';
+buttonReset.style.backgroundColor = 'transparent';
 buttonReset.style.padding = '0.375rem 0.75rem';
-buttonReset.style.boxShadow = '0 1px 3px rgb(0,0,0,0.2)';
+buttonReset.style.boxShadow = '0 1px 3px rgba(0, 0, 0, 0.2)';
 buttonReset.style.margin = '0.5rem';
 
-const buttonIncrease = document.createElement('button');
-buttonIncrease.textContent = '+';
-div.appendChild(buttonIncrease);
-
+const buttonIncrease = createAndAppendElement('button', '', '+', div);
 buttonIncrease.style.color = 'black';
-buttonIncrease.style.backgroundColor = 'trasparent';
+buttonIncrease.style.backgroundColor = 'transparent';
 buttonIncrease.style.padding = '0.375rem 0.75rem';
-buttonIncrease.style.boxShadow = '0 1px 3px rgb(0,0,0,0.2)';
+buttonIncrease.style.boxShadow = '0 1px 3px rgba(0, 0, 0, 0.2)';
 buttonIncrease.style.margin = '0.5rem';
 
+// Funzione per aggiornare il colore dell'h1 in base al valore
+function updateColor() {
+    if (value > 0) {
+        h1.style.color = 'green';
+    } else if (value < 0) {
+        h1.style.color = 'red';
+    } else {
+        h1.style.color = 'black';
+    }
+}
+
 let value = 0;
+const buttonWrapper = div.querySelectorAll('button');
 
-buttonIncrease.addEventListener('click', function(add){
-    value++;
-    h1.innerHTML = value;
-    h1.style.color = 'green';
-});
+const buttons = div.querySelectorAll('button');
 
-buttonDecrease.addEventListener('click', function(add){
-    value--;
-    h1.innerHTML = value;
-    h1.style.color = 'red';
-});
+// Aggiunto un event listener a ciascun pulsante
+buttons.forEach(button => {
+    button.addEventListener('click', function(event) {
+        const action = this.textContent;
 
-buttonReset.addEventListener('click', function(add){
-    value = 0;
-    h1.innerHTML = value;
-    h1.style.color = 'black';
+        if (action === '-') {
+            value--;
+        } else if (action === 'Resetta') {
+            value = 0;
+        } else {
+            value++;
+        }
+
+        h1.textContent = value;
+        updateColor();
+    });
 });

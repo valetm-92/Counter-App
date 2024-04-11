@@ -31,7 +31,7 @@ p {
 }
 
 .section-center {
-    width: 90vw;
+    width: 90vh;
     margin: 0 auto;
     max-width: 1170px;
 }
@@ -73,3 +73,250 @@ main {
     left: 15%;
 }
 
+@media screen and (max-width: 1200px) {
+    h1,h2,h3,h4 {
+        text-transform: capitalize;
+        margin-bottom: 0.75rem;
+        line-height: 1.25;
+    }
+    
+    p {
+        font-size: 3rem;
+        font-weight: bold;
+    }
+
+    .section {
+        padding: 5rem 0;
+    }
+    
+    .section-center {
+        width: 90vh;
+        margin: 0 auto;
+        max-width: 1170px;
+    }
+    
+    main {
+        margin: 0;
+        padding: 0;
+    }
+
+    .circle1, .circle2 {
+        height: 220px;
+        width: 220px;
+        position: absolute;
+        border-radius: 220px;
+    }
+
+    .circle1 {
+        top: 5%;
+        right: 15%;
+    }
+    
+    .circle2 {
+        bottom: 5%;
+        left: 15%;
+    }
+    
+}
+
+@media screen and (max-width: 1024px) {
+    .container {
+        text-align: center;
+        background: linear-gradient(to right bottom,rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
+        border-radius: 20px;
+        width: 80vh;
+        min-height: 30vh;
+        padding: 60px;
+    }
+
+    .circle1, .circle2 {
+        height: 150px;
+        width: 150px;
+        position: absolute;
+        border-radius: 150px;
+    }
+
+    .circle1 {
+        top: 25%;
+        right: 15%;
+    }
+    
+    .circle2 {
+        bottom: 25%;
+        left: 15%;
+    }
+}
+
+
+@media screen and (max-width: 992px) {
+    .container {
+        text-align: center;
+        background: linear-gradient(to right bottom,rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
+        border-radius: 20px;
+        width: 40vh;
+        min-height: 30vh;
+        padding: 60px;
+    }
+
+    .circle1, .circle2 {
+        height: 150px;
+        width: 150px;
+        position: absolute;
+        border-radius: 150px;
+    }
+
+    .circle1 {
+        top: 25%;
+        right: 15%;
+    }
+    
+    .circle2 {
+        bottom: 25%;
+        left: 15%;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .container {
+        text-align: center;
+        background: linear-gradient(to right bottom,rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
+        border-radius: 20px;
+        width: 50vh;
+        min-height: 30vh;
+        padding: 60px;
+    }
+
+    .circle1, .circle2 {
+        height: 150px;
+        width: 150px;
+        position: absolute;
+        border-radius: 150px;
+    }
+
+    .circle1 {
+        top: 20%;
+        right: 15%;
+    }
+    
+    .circle2 {
+        bottom: 20%;
+        left: 15%;
+    }
+}
+
+@media screen and (max-width: 576px){
+    .container {
+        text-align: center;
+        background: linear-gradient(to right bottom,rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
+        border-radius: 20px;
+        width: 60%;
+        min-height: 35vh;
+        padding: 60px;
+    }
+
+    .circle1, .circle2 {
+        height: 120px;
+        width: 120px;
+        position: absolute;
+        border-radius: 120px;
+    }
+
+    .circle1 {
+        top: 18%;
+        right: 15%;
+    }
+    
+    .circle2 {
+        bottom: 18%;
+        left: 15%;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .container {
+        text-align: center;
+        background: linear-gradient(to right bottom,rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
+        border-radius: 20px;
+        width: 60%;
+        min-height: 40vh;
+        padding: 60px;
+    }
+
+    .circle1, .circle2 {
+        height: 120px;
+        width: 120px;
+        position: absolute;
+        border-radius: 120px;
+    }
+
+    .circle1 {
+        top: 15%;
+        right: 15%;
+    }
+    
+    .circle2 {
+        bottom: 15%;
+        left: 15%;
+    }
+
+    p {
+        font-size: 3rem;
+        font-weight: bold;
+    }
+}
+
+@media screen and (max-width: 280px){
+    .container {
+        text-align: center;
+        background: linear-gradient(to right bottom,rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
+        border-radius: 20px;
+        width: 40%;
+        min-height: 40vh;
+        padding: 60px;
+    }
+
+    .circle1, .circle2 {
+        height: 100px;
+        width: 100px;
+        position: absolute;
+        border-radius: 100px;
+    }
+
+    .circle1 {
+        top: 10%;
+        right: 15%;
+    }
+    
+    .circle2 {
+        bottom: 10%;
+        left: 15%;
+    }
+
+    h1,h2,h3,h4 {
+        text-transform: capitalize;
+        margin-bottom: 0.75rem;
+        line-height: 1.25;
+    }
+    
+    p {
+        font-size: 2rem;
+        font-weight: bold;
+    }
+
+    .section {
+        padding: 5rem 0;
+    }
+    
+    .section-center {
+        width: 90vh;
+        margin: 0 auto;
+        max-width: 1170px;
+    }
+    
+    main {
+        margin: 0;
+        padding: 0;
+        display: flex;
+    }
+}
